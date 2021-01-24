@@ -1,0 +1,54 @@
+.team {
+
+    &__title {
+        color: $clr-primary-dark;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    &__subtitle {
+        color: $clr-primary-orange;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 10rem;
+
+        span {
+            color: $clr-primary-dark;
+        }
+    }
+
+    &__greetings {
+        text-transform: uppercase;
+        color: $clr-primary-dark;
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    &__logo {
+        height: 3rem;
+        width: 3rem;
+        margin: 0 auto 5rem auto;
+    }
+
+    &__person {
+
+
+        &-photo {
+            height: 10rem;
+            margin-bottom: 1.5rem;
+
+            img {
+                margin: 0 auto;
+                height: 100%;
+                width: 12rem;
+            }
+        }
+
+        &-title {
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 0.5rem;
+        }
+        &-award {
+            text-align: center;
+        }
+    }
+}

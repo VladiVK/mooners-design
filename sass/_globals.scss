@@ -1,0 +1,106 @@
+html {
+    font-size: 10px;
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    background: url('../images/bg-image.png');
+}
+
+.container {
+    width: 85vw;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.section {
+    padding: 5rem 0;
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.btn {
+    display: block;
+    width: 17rem;
+    padding: 1.3rem 3rem;
+    text-align: center;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 2.5rem;
+    text-transform: capitalize;
+    transition: all .3s ease-in-out;
+    font-size: 2rem;
+
+}
+
+
+.btn-secondary {
+    background: $clr-primary-green;
+    color: #fff;
+
+    &:hover {
+        color: $clr-green-dark;
+        background: transparent;
+        transform: scale(1.09);
+    }
+
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 5.8rem;
+}
+
+h2 {
+    font-size: 3.8rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+// 1024px
+@include breakpoint-up(large) {
+    h1 {
+        font-size: 6.8rem;
+    }
+
+    h2 {
+        font-size: 4.8rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+}

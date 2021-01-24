@@ -1,0 +1,50 @@
+.about {
+
+    &__subtitle {
+        color: $clr-primary-orange;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    .container {
+        @include breakpoint-up(small) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(20rem, 1fr));
+            column-gap: 3rem;
+        }
+    }
+
+
+}
+
+.advantage {
+    text-align: center;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint-up(small) {
+        margin-bottom: 0;
+    }
+
+    &__icon {
+        height: 6.4rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 6.4rem;
+        }
+
+    }
+
+    &__text {
+        text-transform: capitalize;
+        font-size: 2.6rem;
+    }
+}

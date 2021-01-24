@@ -1,0 +1,56 @@
+.header {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        color: $clr-primary-dark;
+        text-transform: capitalize;
+
+        span {
+            color: $clr-primary-orange;
+            text-transform: uppercase;
+        }
+    }
+
+    &__underline-img {
+        margin-bottom: 6rem;
+        max-width: 45rem;
+    }
+
+    &__btn {
+        color: $clr-green-dark;
+        background: transparent;
+
+        &:hover {
+            background: $clr-primary-green;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        @include breakpoint-up(medium) { //992px
+            background: $clr-primary-green;
+            color: #fff;
+
+            &:hover {
+                color: $clr-green-dark;
+                background: transparent;
+                transform: scale(1.05);
+            }
+
+        }
+    }
+    // screen 992px 
+    @include breakpoint-up(medium) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 3rem;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+
+
+
+}
