@@ -1,0 +1,29 @@
+.main-skill {
+
+    &__title {
+        text-transform: capitalize;
+        margin-bottom: 3rem;
+    }
+
+    &__orange {
+        color: $clr-primary-orange;
+    }
+    &__dark {
+        color: $clr-primary-dark;
+    }
+    &__text {
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    @include breakpoint-up(medium) {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1rem;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+}

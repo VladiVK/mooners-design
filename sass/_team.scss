@@ -30,6 +30,7 @@
 
     &__person {
 
+        margin-bottom: 5rem;
 
         &-photo {
             height: 10rem;
@@ -45,10 +46,21 @@
         &-title {
             text-align: center;
             text-transform: capitalize;
+            color: $clr-primary-dark;
             margin-bottom: 0.5rem;
         }
         &-award {
             text-align: center;
+        }
+    }
+
+    .container {
+        @include breakpoint-up(small) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(20rem, 1fr));
+        }
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(4, minmax(20rem, 1fr));
         }
     }
 }
