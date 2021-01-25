@@ -1,0 +1,106 @@
+.gallery {
+
+    &__title {
+        text-align: center;
+        color: $clr-primary-dark;
+        text-transform: capitalize;
+        margin-bottom: 5rem;
+    }
+
+    &__picture-box {
+        height: 30rem;
+        margin-bottom: 1.5rem;
+        border-radius: $radius;
+        overflow: hidden;
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9), );
+        transition: $transition-5;
+
+        position: relative;
+
+        &:hover {
+            .gallery__img-title {
+                opacity: 1;
+            }
+
+            .gallery__img {
+                opacity: .5;
+            }
+        }
+    }
+
+    &__img-title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 2rem;
+        text-transform: uppercase;
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: $radius;
+        transition: $transition-5;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.5;
+
+        }
+    }
+
+    .container {
+        @include breakpoint-up(small) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+            grid-gap: 1.5rem;
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 25rem);
+            grid-gap: 1rem;
+
+            grid-template-areas:
+                "a b c d"
+                "a e f d";
+
+            .gallery__picture-box--1 {
+                height: 100%;
+                grid-area: b;
+            }
+
+            .gallery__picture-box--2 {
+                height: 100%;
+                grid-area: c;
+            }
+
+            .gallery__picture-box--3 {
+                height: 100%;
+                grid-area: e;
+            }
+
+            .gallery__picture-box--4 {
+                height: 100%;
+                grid-area: d;
+            }
+
+            .gallery__picture-box--5 {
+                height: 100%;
+                grid-area: a;
+            }
+
+            .gallery__picture-box--6 {
+                height: 100%;
+                grid-area: f;
+            }
+
+        }
+
+    }
+}
