@@ -1,0 +1,113 @@
+.footer {
+    &__info {
+        margin-bottom: 2rem;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &__img {
+        height: 3rem;
+        width: 6rem;
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+
+    &__services-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+        color: $clr-primary-dark;
+    }
+
+    &__service {
+        color: $clr-primary-orange;
+        // text-align: center;
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            padding-bottom: 0.7rem;
+        }
+    }
+
+    &__social-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 20rem;
+        margin: 3rem auto;
+    }
+
+    &__social-link {
+        width: 3rem;
+        height: 3rem;
+        transition: $transition-3;
+        padding: 0.3rem;
+
+        &:hover {
+            transform: scale(1.1);
+            border: 1px solid $clr-primary-orange;
+            border-radius: $radius;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: 1.8rem;
+
+        span:nth-child(1) {
+            color: $clr-primary-orange;
+            font-weight: 700;
+        }
+
+        span:nth-child(2) {
+            color: $clr-primary-dark;
+        }
+
+        span:nth-child(3) {
+            color: $clr-primary-dark;
+        }
+
+        span:nth-child(4) {
+            color: $clr-primary-orange;
+        }
+    }
+
+    @include breakpoint-up(small) {
+        .container {
+            margin-bottom: 2rem;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 2rem;
+            place-items: center;
+        }
+
+        &__logo {
+            justify-content: flex-start;
+        }
+
+        &__text {
+            text-align: left;
+        }
+
+        &__social-links {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        &__social-link:not(:last-child) {
+            margin-bottom: 1rem;
+
+        }
+
+    }
+}
