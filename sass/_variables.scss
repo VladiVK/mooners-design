@@ -4,6 +4,11 @@ $clr-primary-green: #8FEAE9;
 $clr-green-dark: #2bbbb9;
 
 $transition-3: all .3s linear;
-$transition-5: all .5s linear;
+$transition-5: all .5s ease-in-out;
 
 $radius: 1rem;
+
+$burger-height: 2rem;
+$burger-item-height: 0.3rem;
+
+$overlay: #fff;

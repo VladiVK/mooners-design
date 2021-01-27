@@ -19,13 +19,24 @@ body {
     width: 85vw;
     max-width: 1170px;
     margin: 0 auto;
+
+    @include breakpoint-up(small) {
+        width: 90vw;
+    }
 }
+
 .section {
     padding: 5rem 0;
 }
 
 .hide-for-mobile {
     @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(medium) {
         display: none;
     }
 }
@@ -86,6 +97,7 @@ img {
     display: block;
     width: 100%;
 }
+
 // 1024px
 @include breakpoint-up(large) {
     h1 {

@@ -1,5 +1,6 @@
 .header {
     height: 90vh;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
 
@@ -28,7 +29,8 @@
             transform: scale(1.05);
         }
 
-        @include breakpoint-up(medium) { //992px
+        @include breakpoint-up(medium) {
+            //992px
             background: $clr-primary-green;
             color: #fff;
 
@@ -40,6 +42,7 @@
 
         }
     }
+
     // screen 992px 
     @include breakpoint-up(medium) {
         .container {
