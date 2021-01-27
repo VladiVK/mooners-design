@@ -43,6 +43,9 @@
         align-items: center;
         max-width: 20rem;
         margin: 3rem auto;
+
+
+
     }
 
     &__social-link {
@@ -87,7 +90,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             column-gap: 2rem;
-            place-items: center;
+            justify-items: center;
         }
 
         &__logo {
@@ -99,8 +102,9 @@
         }
 
         &__social-links {
-            display: flex;
+            margin: 0;
             flex-direction: column;
+            justify-self: end;
 
         }
 
