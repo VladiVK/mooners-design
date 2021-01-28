@@ -1,0 +1,59 @@
+// Sidebar
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: $transition-5;
+    background: $clr-primary-dark;
+    z-index: 2;
+
+    @include breakpoint-up(medium) {
+        display: none;
+    }
+
+    &.toggle-sidebar {
+        transform: translateX(0);
+    }
+
+    &__link {
+        display: block;
+        padding: 1.5rem 3.5rem;
+        color: $clr-primary-orange;
+        color: $clr-primary-light;
+        text-transform: capitalize;
+        transition: $transition-3;
+        font-size: 2.3rem;
+        letter-spacing: $spacing;
+
+        &:first-child {
+            margin-top: 5rem;
+        }
+
+        &:hover {
+            padding-left: 4rem;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 3.5rem;
+        max-width: 40rem;
+
+    }
+
+    &__social-link {
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0.5rem 0;
+        transition: $transition-3;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
