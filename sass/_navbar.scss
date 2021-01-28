@@ -1,12 +1,15 @@
 .navbar {
     position: fixed;
+    display: block;
     top: 0;
     left: 0;
     width: 100%;
     height: 10vh;
+    background: url('../images/bg-image.png');
+
+    z-index: 1;
 
     &__center {
-
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -42,15 +45,66 @@
         width: 100%;
         background: $clr-primary-dark;
         transition: $transition-5;
-        transform-origin: center;
+        // transform-origin: center;
+    }
+
+    &__links {
+        display: none;
+
+        @include breakpoint-up(medium) {
+            display: block;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        position: relative;
+        font-size: 2.5rem;
+        padding-top: 0.5rem;
+        color: $clr-primary-dark;
+        text-transform: capitalize;
+        transition: $transition-3;
+
+        &:not(:last-child) {
+            margin-right: 1.8rem;
+        }
+
+        &:hover {
+            color: $clr-primary-orange;
+            transform: translateY(-0.3rem);
+
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            border-bottom: 0.35rem solid $clr-primary-dark;
+            transition: $transition-3;
+            opacity: 0;
+
+        }
     }
 
 }
+
+.navbar-scroll {
+    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
 
 .toggle-burger {
 
     .navbar__toggle-item:nth-child(1) {
         transform: translateY(($burger-height / 2) - $burger-item-height) rotate(45deg);
+
     }
 
     .navbar__toggle-item:nth-child(2) {
@@ -59,9 +113,11 @@
 
     .navbar__toggle-item:nth-child(3) {
         transform: translateY(-($burger-height / 2)) rotate(-45deg);
+
     }
 }
 
+// Sidebar
 .sidebar {
     position: fixed;
     top: 0;
@@ -73,7 +129,48 @@
     background: $clr-primary-dark;
     z-index: 2;
 
+    @include breakpoint-up(medium) {
+        display: none;
+    }
+
     &.toggle-sidebar {
         transform: translateX(0);
+    }
+
+    &__link {
+        display: block;
+        padding: 1.5rem 3.5rem;
+        color: $clr-primary-orange;
+        color: $clr-primary-light;
+        text-transform: capitalize;
+        transition: $transition-3;
+        font-size: 2.3rem;
+        letter-spacing: $spacing;
+
+        &:first-child {
+            margin-top: 5rem;
+        }
+
+        &:hover {
+            padding-left: 4rem;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 3.5rem;
+
+    }
+
+    &__social-link {
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0.5rem 0;
+        transition: $transition-3;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

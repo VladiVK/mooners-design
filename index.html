@@ -15,9 +15,6 @@
 </head>
 
 <body>
-    <!-- overlay -->
-    <div class="overlay"></div>
-    <!-- end of overlay -->
     <!-- *** Navbar *** -->
     <nav class="navbar">
         <div class="navbar__center container">
@@ -27,23 +24,43 @@
                 <span class="navbar__toggle-item"></span>
                 <span class="navbar__toggle-item"></span>
             </div>
-            <ul class="navbar__links hide-for-mobile">
-                <a class="navbar__link" href="#">Home</a>
-                <a class="navbar__link" href="#">About</a>
-                <a class="navbar__link" href="#">Works</a>
-                <a class="navbar__link" href="#">Team</a>
-                <a class="navbar__link" href="#">Gallery</a>
-                <a class="navbar__link" href="#">Contact</a>
+            <ul class="navbar__links">
+                <a class="navbar__link scroll-link" href="#home">home</a>
+                <a class="navbar__link scroll-link" href="#team">team</a>
+                <a class="navbar__link scroll-link" href="#works">works</a>
+                <a class="navbar__link scroll-link" href="#gallery">gallery</a>
+                <a class="navbar__link scroll-link" href="#contact">contact</a>
             </ul>
 
         </div>
     </nav>
     <!-- *** End of Navbar *** -->
     <!-- Sidebar -->
-    <div class="sidebar"></div>
+    <ul class="sidebar">
+        <a class="sidebar__link scroll-link" href="#home">home</a>
+        <a class="sidebar__link scroll-link" href="#team">team</a>
+        <a class="sidebar__link scroll-link" href="#works">works</a>
+        <a class="sidebar__link scroll-link" href="#gallery">gallery</a>
+        <a class="sidebar__link scroll-link" href="#contact">contact</a>
+
+        <ul class="sidebar__social">
+            <a href="#" class="sidebar__social-link">
+                <img src="./icons/sidebar-facebook.png" alt="facebook">
+            </a>
+            <a href="#" class="sidebar__social-link">
+                <img src="./icons/sidebar-instagram.png" alt="instagram">
+            </a>
+            <a href="#" class="sidebar__social-link">
+                <img src="./icons/sidebar-linkedin.png" alt="linkedin">
+            </a>
+            <a href="#" class="sidebar__social-link">
+                <img src="./icons/sidebar-twitter.png" alt="twitter">
+            </a>
+        </ul>
+    </ul>
     <!-- end of Sidebar -->
     <!-- *** section Hero *** -->
-    <section class="header">
+    <section class="header" id="home">
         <div class="container">
             <article class="header__info">
                 <h3 class="header__subtitle">
@@ -57,7 +74,7 @@
                 <a href="#" class="btn header__btn">get a quote</a>
             </article>
 
-            <article class="header__img-container hide-for-mobile">
+            <article class="header__img-container">
                 <img class="header__img" src="./images/hero-ginger.png" alt="hero image">
             </article>
 
@@ -65,7 +82,7 @@
     </section>
     <!-- *** End of Hero section *** -->
     <!-- *** section About*** -->
-    <section class="about section">
+    <section class="about section" id="about">
         <h4 class="about__subtitle">our advantages</h4>
         <h2 class="about__title">Who we are?</h2>
         <div class="container">
@@ -103,7 +120,7 @@
     </section>
     <!-- *** End of About section *** -->
     <!-- *** section Latest Works*** -->
-    <section class="works section">
+    <section class="works section" id="works">
         <h2 class="works__title">just look</h2>
         <h3 class="works__subtitle">at our latest works!</h3>
         <div class="container">
@@ -154,7 +171,7 @@
     </section>
     <!-- *** End of Latest Works section *** -->
     <!-- *** section Team*** -->
-    <section class="team section">
+    <section class="team section" id="team">
         <h2 class="team__title">What makes us different?</h2>
         <h4 class="team__subtitle">
             It is simple <br> Our clients <span>&</span> Our projects
@@ -231,7 +248,7 @@
     </section>
     <!-- *** End of Main Skill section *** -->
     <!-- *** section Gallery *** -->
-    <section class="gallery section">
+    <section class="gallery section" id="gallery">
         <h2 class="gallery__title">inspiration gallery</h2>
         <div class="container">
             <!-- single picture -->
@@ -274,7 +291,7 @@
     </section>
     <!-- *** End of Gallery section *** -->
     <!-- *** End of Footer *** -->
-    <footer class="footer section">
+    <footer class="footer section" id="contact">
         <div class="container">
             <article class="footer__info">
                 <div class="footer__logo">
@@ -310,7 +327,7 @@
             </ul>
         </div>
         <p class="footer__copyright">
-            <span>&copy;</span> <span id="copyright">2021</span>
+            <span>&copy;</span> <span id="time">2021</span>
             <span>Mooners</span><span>Design</span>
         </p>
     </footer>
